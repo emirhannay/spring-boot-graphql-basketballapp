@@ -1,0 +1,34 @@
+enum BasketballPlayerPosition {
+    POINTGUARD
+    SHOOTINGGUARD
+    SMALLFORWARD
+    POWERFORWARD
+    CENTER
+}
+type BasketballPlayer {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    position: BasketballPlayerPosition!
+    basketballTeam: BasketballTeam
+}
+type BasketballTeam {
+    id: ID!
+    name: String!
+    foundingDate: String!
+    basketballPlayers: [BasketballPlayer!]
+}
+input CreateBasketballPlayerRequestDTO {
+    firstName: String!
+    lastName: String!
+    position: BasketballPlayerPosition!
+}
+input CreateBasketballTeamRequestDTO {
+    name: String!
+}
+input AssignPlayerToTeamRequestDTO {
+    name: String!
+    playerId: ID!
+}
+
+

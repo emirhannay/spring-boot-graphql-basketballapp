@@ -1,0 +1,5 @@
+type Mutation {
+    createPlayer(basketballPlayerRequestDTO: CreateBasketballPlayerRequestDTO):BasketballPlayer
+    deletePlayer(id: ID!):BasketballPlayer
+    assignPlayerToTeam(assignPlayerToTeamRequestDTO: AssignPlayerToTeamRequestDTO):BasketballPlayer
+}
