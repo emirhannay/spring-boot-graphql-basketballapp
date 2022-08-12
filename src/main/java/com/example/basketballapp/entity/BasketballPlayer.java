@@ -32,5 +32,8 @@ public class BasketballPlayer {
         }
         this.basketballTeam = basketballTeam;
     }
+    public void removeFromTeam(){
+        this.basketballTeam = null;
+    }
 
 }

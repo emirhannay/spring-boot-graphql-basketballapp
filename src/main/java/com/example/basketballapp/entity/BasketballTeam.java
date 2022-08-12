@@ -30,7 +30,7 @@ public class BasketballTeam {
         }
         basketballPlayers.add(basketballPlayer);
     }
-    public void deletePlayer(BasketballPlayer basketballPlayer){
-        basketballPlayers.remove(basketballPlayer);
+
     }
-}
+
+

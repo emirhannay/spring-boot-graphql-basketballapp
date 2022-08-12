@@ -77,5 +77,9 @@ public class InitializerConfig implements ApplicationRunner {
         basketballPlayerRepository.saveAndFlush(player3);
         basketballPlayerRepository.saveAndFlush(player4);
         basketballPlayerRepository.saveAndFlush(player5);
+
+        BasketballPlayer tempPlayer = basketballPlayerRepository.findById(5L).orElseThrow();
+        tempPlayer.removeFromTeam();
+        basketballPlayerRepository.saveAndFlush(tempPlayer);
     }
 }
